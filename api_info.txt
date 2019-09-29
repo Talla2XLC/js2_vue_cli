@@ -1,0 +1,6 @@
+GET: /api/products - список товаров
+GET: /api/products/:id - информация о товаре
+POST: /api/products/:id/add - добавить товар в корзину
+
+GET: /api/products/cart - корзина
+DELETE: /api/products/cart/:id - удалить товар из корзины
