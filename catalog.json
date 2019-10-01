@@ -3,42 +3,42 @@
 		"id": "1",
 		"title": "Shirt",
 		"price": 150,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/shirt.png"
 	},
 	{
 		"id": "2",
 		"title": "Socks",
 		"price": 50,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/socks.png"
 	},
 	{
 		"id": "3",
 		"title": "Jacket",
 		"price": 350,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/jacket.png"
 	},
 	{
 		"id": "4",
 		"title": "Shoes",
 		"price": 250,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/shoes.png"
 	},
 	{
 		"id": "5",
 		"title": "Pants",
 		"price": 450,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/pants.png"
 	},
 	{
 		"id": "6",
 		"title": "T-shirt",
 		"price": 100,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/t-shirt.png"
 	},
 	{
 		"id": "7",
 		"title": "Underwear",
 		"price": 160,
-		"img": "img/img_unavailable.jpg"
+		"img": "http://localhost:3000/img/underwear.png"
 	}
 ]

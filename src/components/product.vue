@@ -1,19 +1,29 @@
 <template>
-<div class="product">
-	<div class="product-image">
-		<img src="" alt="">
+	<div class="product">
+		<router-link :to="`/product/${product.id}`" class="product-image">
+			<img :src="product.img" alt="product_img" width="205" height="205">
+			<div class="product-title">
+				{{ product.title }}
+			</div>
+		</router-link>
+		<div class="product-description">
+			Some interesting product description
+		</div>
+		<div class="product-actions">
+			<button @click="addToCart">Купить</button>
+		</div>
 	</div>
-	<div class="product-description">
-		
-	</div>
-	<div class="product-actions">
-		
-	</div>
-</div>
 </template>
 
 <script>
-	
+	export default {
+		props: ['product'],
+		methods: {
+			addToCart() {
+				this.$store.dispatch('addToCart', this.product.id);
+			}
+		}
+	};
 </script>
 
 <style lang="sass" scoped>
@@ -25,9 +35,32 @@
 	height: 176px
 	width: 100%
 	padding: 10px
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: 20px
+	position: relative
 	img
-		max-height: 100%
-		max-width: 100%
+		height: 100%
+		width: auto
+		object-fit: cover
+
+.product-title
+	background-color: #607D8B
+	color: #fff
+	font-size: 18px
+	padding: 0 6px
+	line-height: 24px
+	height: 24px
+	position: absolute
+	bottom: 5px
+	left: 10px
+
+.product-description
+	font-size: 14px
+	line-height: 24px
+	padding: 0 20px
+	margin-bottom: 10px
 
 .product-actions
 	height: 44px

@@ -1,23 +1,33 @@
 <template>
   <div class="home">
-  	<div class="product-list"></div>
+  	<div class="product-list">
+  		<product v-for="product in products" :product="product" :key="product.id"></product>
+  	</div>
   </div>
 </template>
 
 <script>
-import Product from '@/components/product';
+import product from '@/components/product';
 export default {
   name: "home",
   created() {
   	this.$store.dispatch('fetchProducts')
   },
-  componenets: {
-  	Product,
+  computed: {
+  	products() {
+  		return this.$store.state.products;
+  	}
+  },
+  components: {
+  	product
   }
 };
 </script>
 
 <style lang="sass" scoped>
+.home
+	width: 100%
+	padding: 40px 20px
 .product-list
 	padding: 0 20px
 	display: grid

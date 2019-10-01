@@ -39,5 +39,6 @@ html
 main 
   display: flex
   flex: 1 0 auto
+  width: 100%
   height: calc(100% - 96px)
 </style>
